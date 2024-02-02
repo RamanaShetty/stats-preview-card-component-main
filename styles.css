@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root {
+    --very-dark-blue: hsl(233, 47%, 7%);
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --slightly-transparent-white-main: hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lexend Deca", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--very-dark-blue);
+    color: var(--white);
+}
+
+.container {
+    display: flex;
+    background-color: var(--dark-desaturated-blue);
+    margin-bottom: 1rem;
+    width: 55%;
+    border-radius: 10px;
+}
+
+.left {
+    width: 55%;
+    padding: 3.5rem 5rem 2rem 4rem;
+}
+
+h1 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+span {
+    color: var(--soft-violet);
+}
+
+.matter {
+    margin-bottom: 3.5rem;
+    padding-right: 1rem;
+    color: var(--slightly-transparent-white-main);
+}
+
+.boasting {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 3rem;
+}
+
+.sub {
+    color: var(--slightly-transparent-white);
+}
+
+.container .image {
+    width: 45%;
+    height: auto;
+    border-radius: 0 10px 10px 0;
+    background: url(./images/image-header-desktop.jpg);
+    background-color: var(--soft-violet);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    body{
+        text-align: center;
+    }
+    .container {
+        flex-direction: column-reverse;
+        width: 80%;
+        min-height: 85vh;
+        border-radius: 10px; 
+    }
+    .left{
+        height: 65vh;
+        width: 100%;
+        padding: 2rem;
+        padding-bottom: 0;
+    }
+    h1{
+        font-size: 33px;
+    }
+    .matter{
+        text-align: center;
+        line-height: 1.6;
+        margin-bottom: 3rem;
+    }
+    .container .image {
+        height: 25vh;
+        width: 100%;
+        border-radius: 10px 10px 0 0; 
+    }
+    .boasting{
+        margin: 0;
+
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    h3{
+        font-size: 23px;
+        margin-bottom: 8px;
+    }
+    .sub{
+        margin-bottom: 1.5rem;
+    }
+}
